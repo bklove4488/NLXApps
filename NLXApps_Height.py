@@ -89,7 +89,7 @@ def plot_visualizations(df):
     zi = griddata((df['X'], df['Y']), df['Height'], (xi, yi), method='linear')
     cp = ax1.contourf(xi, yi, zi, cmap='viridis', levels=15)
     fig.colorbar(cp, ax=ax1, label='Height (um)')
-    ax1.set_title('Bump Height Map (Cleaned)')
+    ax1.set_title('Bump Height Map')
 
     # [2] Height Box Plot
     sns.boxplot(y=df['Height'], ax=axes[0, 1], color='skyblue')
